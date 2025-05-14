@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Swiggy</title>
+</head>
+<body>
+<div class="body-div">
+    <div class="main-container">
+            <header>
+                <div class="info-div">
+                    <div class="info-user">
+                        <h4 class="username" id="user-name">Rashid</h4>
+                        <div class="info-location">
+                            <i class="fa-solid fa-location-dot "></i>
+                            <p class="location" id="location">Vizag</p>
+                        </div>
+                    </div>
+                    <div class="info-profile">
+                        <i class="fa-solid fa-user profile"></i>
+                    </div> 
+                </div>
+        
+                <!-- Search-input -->
+                <input type="text" name="search-input" placeholder="search" class="search-input">
+            </header>
+
+            <section class="banner">
+                <div class="carousel" data-flickity='{ "autoPlay": true, "autoPlay" : 2000 }'>
+                    <div class="carousel-cell" style="background-image: url(images/banner/banner-1.jpg);"></div>
+                    <div class="carousel-cell" style="background-image: url(images/banner/banner-2.jpg);" ></div>
+                    <div class="carousel-cell" style="background-image: url(images/banner/banner-3.jpg);"></div>
+                    <div class="carousel-cell" style="background-image: url(images/banner/banner-4.jpg);"></div>
+                    <div class="carousel-cell" style="background-image: url(images/banner/banner-5.jpg);"></div>
+                  </div>
+            </section> 
+
+            <section class="nav-items"> 
+                <p class="question"><span class="question-name" id="question-name"></span>, WHAT'S ON YOUR MIND ?</p>
+                    <div class="nav-images-container">
+                        <div class="nav-image-div-1 nav-img-div" id="biryani" data-nav="biryani"></div>
+                        <div class="nav-image-div-2 nav-img-div" id="burger" data-nav="burger"></div>
+                        <div class="nav-image-div-3 nav-img-div" id="pizza" data-nav="pizza"></div>
+                        <div class="nav-image-div-4 nav-img-div" id="desert" data-nav="desert"></div>
+                        <div class="nav-image-div-5 nav-img-div" id="tiffin" data-nav="tiffin"></div>
+                        <div class="nav-image-div-6 nav-img-div" id="cake" data-nav="cake"></div>
+                    </div>
+            </section>
+
+            <section class="feed">
+                <h4 class="feed-title" id="feed-title"></h4>
+                <div class="feed-main" id="feed-main">
+
+                    <!-- <div class="feed-item">
+                        <div class="feed-info">
+                            <p class="item-title">Spicy Zinger Burger</p>
+                            <p class="item-price">₹230</p>
+                            <p class="item-rating">4.2</p>
+                            <p class="item-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ad quibusdam tempora.</p>
+                        </div>
+                        <div class="feed-image-div" style="background-image: url();">
+                            <button class="add-btn">ADD</button>
+                        </div>
+                    </div> -->
+
+                </div>
+            </section>
+
+                    <!-- Billing page -->
+
+            <div class="bill-page-container" id="bill-page-container">
+
+                <div class="delivery-time-container">   
+                    <i class="fa-solid fa-arrow-left" id="go-back-arrow"></i>
+                    <i class="fa-solid fa-location-arrow"></i>
+                    <div class="time">
+                        <p class="delivery-time">15 - 20 mins to deliver</p>
+                        <p class="delivery-time-tag">Delivering Superfast!</p>
+                    </div>  
+                </div>
+
+                <div class="cart-items-container" id="cart-items-container">
+                    <h4 class="items-header">Items</h4>
+
+                    <div class="cart-items-render-container" id="cart-items-render-container">
+                        <!-- <div class="items-list-container">
+                        <div class="items-list">
+                            <p class="item-name">Veg Manchuria</p>
+                            <div class="add-btn-bill">
+                                <div class="count-div count-no" id="bill-decrement">-</div>
+                                <div class="count-div count" id="count-${item.uuid}">5</div>
+                                <div class="count-div count-no" id="bill-increment">+</div>
+                            </div>
+                            <p class="item-price">₹190</p>
+                        </div>
+                    </div>  -->
+                    </div>
+                    <div class="add-more">
+                        <p class="add-more-text">Add more items</p>
+                        <div class="add-more-btn" id="add-more-btn">+</div>
+                    </div>
+                </div>
+                
+                <!-- <div class="coupon-section" id="coupon-section"> -->
+                    <div class="coupon-container" id="coupon-container">
+                        <h4 class="coupon-title">Available Coupon</h4>
+                        <div class="coupon-div" id="coupon-div">
+                            <div class="coupon-wrapper">
+                                <i class="fa-solid fa-money-bill"></i>
+                                <p class="coupon-name">WELCOMEBACK75</p>
+                            </div>
+                            <p class="apply" id="apply">Apply</p>
+                        </div>
+                    </div>
+
+                    <div class="tip-container">
+                        <h4 class="tip-header">Say Thanks with a Tip!</h4>
+                        <p class="tip-description">Day & night, our delivery partners bring your favourite meals. Thanks them with a ip.</p>
+                        <div class="tip-boxes">
+                            <div class="tip" id="20" data-tip="20">
+                                <p data-tip="20">₹20</p>
+                            </div>
+                            <div class="tip most-tipped-div" id="30" data-tip="30">
+                                <p data-tip="30">₹30</p>
+                                <div class="most-tipped">
+                                    <p data-tip="30">Most Tipped</p>
+                                </div>
+                            </div>
+                            <div class="tip" id="40" data-tip="40">
+                                <p data-tip="40">₹40</p>
+                            </div>
+                            <div class="tip" id="50" data-tip="50">
+                                <p data-tip="50">₹50</p>
+                            </div>
+            
+                        </div>
+                    </div>
+
+
+                <div class="coupon-container-after" id="coupon-container-after">
+                    <div class="coupon-wrapper-after">
+                        <p class="applied-coupon-name">'WELCOMEBACK75' applied</p>
+                        <div class="applied-check-wrapper">
+                            <i class="fa-solid fa-check"></i>
+                            <p class= "applied-amount-text"><span class="highlight">₹75</span> coupon savings</p>
+                        </div>
+                    </div>
+                    <p class="remove-coupon-btn" id="remove-coupon-btn">Remove</p>
+                </div>
+
+                
+                
+
+                <div class="coupon-applied-container" id="coupon-applied-container">
+                    <div class="coupon-close-btn" id="coupon-close-btn" >x</div>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <p class="applied-text">WELCOMEBACK75 applied</p>
+                    <p class="coupon-savings-text">₹75 savings with this coupon</p>
+                    <h4 class="yay">YAY!</h4>
+                </div>
+
+                <div class="savings-div" id="savings-div">
+                    <i class="fa-solid fa-circle-check" id="fa-circle-check"></i>
+                    <p class="saved-text"><span class="saved-amount">₹75 saved!</span> On this order</span></p>
+                </div>
+
+                <div class="final-bill-container">
+                    <h4 class="bill-section-header">Bill Details</h4>
+                    <div class="bill-section">
+
+                        <div class="total-items items-div">
+                            <p class="total-items-text">Total Items</p>
+                            <p class="total-items-amount" id="total-items-amount"></p>
+                        </div>
+                        <div class="delivery-fee items-div">
+                            <p class="delivery-fee-text">Delivery Fee</p>
+                            <p class="delivery-fee-amount" id="delivery-fee-amount"></p>
+                        </div>
+                        <div class="extra-discount items-div">
+                            <p class="extra-discount-text">Coupon Discount</p>
+                            <p class="extra-discount-amount" id="extra-discount-amount"></p>
+                        </div>
+
+                        <hr>
+
+                        <div class="delivery-tip items-div">
+                            <p class="delivery-tip-text">Delivery Tip</p>
+                            <p class="delivery-tip-amount" id="delivery-tip-amount"></p>
+                        </div>
+                        <div class="gst-charges items-div">
+                            <p class="gst-charges-text">GST Charges</p>
+                            <p class="gst-charges-amount" id="gst-charges-amount"></p>
+                        </div>
+
+                        <hr class="bold">
+                        
+                        <div class="final-pay items-div">
+                            <p class="final-pay-text">To Pay</p>
+                            <p class="final-pay-amount" id="final-pay-amount"></p>
+                        </div>
+                </div>
+            </div>
+            <!-- payment options -->
+            <div class="payment-section">
+                <h4 class="payment-section-header">Payment modes</h4>
+                <div class="payment-options">
+                    <div class="phonepe pay-option" id="phonepe"></div>
+                    <div class="gpay pay-option" id="gpay"></div>
+                    <div class="paytm pay-option" id="paytm"></div>
+                    <div class="card pay-option" id="card"></div>
+                </div>
+                <form class="payment-form" id="payment-form">
+                    <input type="text" placeholder="4215 6520 4152 0201" value="4215 6520 4152 0201" class="card-number">
+                    <input type="text" placeholder="06/30" value="06/30" class="expiry">
+                    <input type="number" placeholder="519" value="519" class="cvv" maxlength="3" max="999" min="1">
+                    <input type="text" placeholder="NAME ON CARD" class="card-name" id="card-name" value="">
+                </form>
+                <div class="pay-btn" id="pay-btn">
+                    <div class="pay-option-preview" id="payment-option-preview"></div>
+                    <p class="pay-text" id="pay-text"></p>
+                </div>
+             </div>
+        </div>
+
+        <div class="payment-loading-page" id="payment-loading-page">
+            <div class="loader" id="loader"></div>
+            <div class="loader-success" id="loader-success">
+                <i class="fa-solid fa-check loader-check"></i>
+            </div>
+            <p class="loading-text" id="loading-text">Hold On...</p>
+        </div>
+
+        <div class="login-page" id="login-page">
+            <img src="./Logo.jpg" alt="swiggy logo" class="swiggy-logo">
+            <input type="text" name="user" class="login-input" id="login-user-name" placeholder="Your Name" maxlength="12">
+            <!-- <input type="text" name="city" class="login-input" id="login-user-city" placeholder="Your City" maxlength="16"> -->
+             <select name="city" id="login-user-city" class="select">
+                <option value="">Choose City</option>
+                <option value="Vizag">Vizag</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Vijayawada">Vijayawada</option>
+                <option value="Tirupathi">Tirupathi</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Delhi">Delhi</option>
+             </select>
+            <button class="login-btn" id="login-btn">Log In</button>
+        </div>
+
+    </div> 
+
+
+<!-- Preview display -->
+    <div class="preview-container" id="preview-container">
+            <div class="preview-window" id="preview-window">
+                <!-- <div class="preview-image"></div>
+                <div class="preview-info feed-info">
+                    <p class="item-title">Spicy Zinger Burger</p>
+                    <p class="item-price">₹230</p>  
+                    <p class="item-rating">★ 4.2</p>
+                </div>   -->
+            </div>
+            <div class="close-preview-btn" id="close-preview-btn" >x</div>
+    </div>
+
+
+<!-- Add to cart btn -->
+    <div class="add-cart-container" id="add-cart-container">
+        <div class="add-cart">
+            <p class="no-of-items" id="no-of-items"></p>
+            <div class="cart-text-div">
+                <p class="cart-text" id="cart-text">View Cart</p>
+                <p class="cart-arrow">></p>
+            </div>
+        </div>
+    </div>
+</div> 
+
+        
+     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="script.js" type="module"></script>
+</body>
+</html>
