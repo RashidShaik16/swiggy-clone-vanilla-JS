@@ -17,6 +17,7 @@ A fully functional **front-end clone** of the classic Swiggy food ordering app �
 
 ## 🖼️ Preview
 
+![App Screenshot](screenshot.png)
 
 
 ## 🧪 Tech Stack
